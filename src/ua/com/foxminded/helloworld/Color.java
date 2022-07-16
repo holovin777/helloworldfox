@@ -2,6 +2,6 @@ package ua.com.foxminded.helloworld;
 
 public enum Color {
 
-	GREEN, WHITE
+	GREEN, WHITE, ORANGE, BLACK
 
 }

@@ -6,11 +6,11 @@ public class Motorcycle {
 	int yearOfProduction;
 	int price;
 	int weight;
-	String color;
+	Color color;
 	String engineType;
 	boolean isReadyToDrive;
 
-	public Motorcycle(String name, int yearOfProduction, int price, int weight, String color, String engineType, boolean isReadyToDrive) {
+	public Motorcycle(String name, int yearOfProduction, int price, int weight, Color color, String engineType, boolean isReadyToDrive) {
 		this.name = name;
 		this.yearOfProduction = yearOfProduction;
 		this.price = price;
