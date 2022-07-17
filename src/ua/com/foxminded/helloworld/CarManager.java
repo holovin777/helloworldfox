@@ -10,7 +10,7 @@ public class CarManager {
 
 		System.out.println(car1);
 		System.out.println(car2);
-		System.out.println(car2 == car3);
+		System.out.println(car2.equals(car3));
 
 	}
 

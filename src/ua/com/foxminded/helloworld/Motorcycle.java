@@ -1,5 +1,7 @@
 package ua.com.foxminded.helloworld;
 
+import java.util.Objects;
+
 public class Motorcycle {
 
 	String name;
@@ -24,6 +26,24 @@ public class Motorcycle {
 	@Override
 	public String toString() {
 		return "Motorcycle [name=" + name + ", yearOfProduction=" + yearOfProduction + ", price=" + price + ", weight=" + weight + ", color=" + color.value + ", engineType=" + engineType + ", isReadyToDrive=" + isReadyToDrive + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(color, engineType, isReadyToDrive);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Motorcycle other = (Motorcycle) obj;
+		return color == other.color && Objects.equals(engineType, other.engineType)
+				&& isReadyToDrive == other.isReadyToDrive;
 	}
 
 }
