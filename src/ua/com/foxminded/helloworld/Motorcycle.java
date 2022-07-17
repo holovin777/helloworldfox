@@ -23,7 +23,7 @@ public class Motorcycle {
 
 	@Override
 	public String toString() {
-		return "Motorcycle [name=" + name + ", yearOfProduction=" + yearOfProduction + ", price=" + price + ", weight=" + weight + ", color=" + color.name().toLowerCase() + ", engineType=" + engineType + ", isReadyToDrive=" + isReadyToDrive + "]";
+		return "Motorcycle [name=" + name + ", yearOfProduction=" + yearOfProduction + ", price=" + price + ", weight=" + weight + ", color=" + color.value + ", engineType=" + engineType + ", isReadyToDrive=" + isReadyToDrive + "]";
 	}
 
 }

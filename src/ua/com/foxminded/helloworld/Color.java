@@ -9,7 +9,7 @@ public enum Color {
 	BLUE("Blue"),
 	GREEN("Green");
 
-	private String value;
+	String value;
 	Color(String value){
 		this.value = value;
 	}
