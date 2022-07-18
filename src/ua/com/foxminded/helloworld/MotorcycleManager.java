@@ -10,6 +10,8 @@ public class MotorcycleManager {
 		System.out.println(moto1);
 		System.out.println(moto2);
 		System.out.println(moto1.equals(moto2));
+		moto2.repair();
+		System.out.println(moto2);
 
 	}
 

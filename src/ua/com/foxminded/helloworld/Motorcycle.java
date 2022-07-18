@@ -23,6 +23,10 @@ public class Motorcycle {
 		this.isReadyToDrive = isReadyToDrive;
 	}
 
+	public void repair() {
+		this.isReadyToDrive = true;
+	}
+
 	@Override
 	public String toString() {
 		return "Motorcycle [name=" + name + ", yearOfProduction=" + yearOfProduction + ", price=" + price + ", weight=" + weight + ", color=" + color.value + ", engineType=" + engineType + ", isReadyToDrive=" + isReadyToDrive + "]";
