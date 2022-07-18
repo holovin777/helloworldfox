@@ -9,7 +9,7 @@ public class Car {
 	int price;
 	int weight;
 	Color color;
-	private int distance;
+	private int distance = 0;
 
 	public Car(String name, int yearOfProduction, int price, int weight, Color color) {
 		this.name = name;
@@ -20,12 +20,18 @@ public class Car {
 	}
 	
 	public void addDistance(int additinalDistance) {
-		distance += additinalDistance;
+		if (additinalDistance > 0) {
+			distance += additinalDistance;
+		}
+	}
+
+	public int getDistance() {
+		return distance;
 	}
 
 	@Override
 	public String toString() {
-		return "Car [name=" + name + ", yearOfProduction=" + yearOfProduction + ", price=" + price + ", weight=" + weight + ", color=" + color.value + "]";
+		return "Car [name = " + name + ", yearOfProduction = " + yearOfProduction + ", price = " + price + ", weight = " + weight + ", color = " + color.value + ", distance = " + distance + "]";
 	}
 
 	@Override
