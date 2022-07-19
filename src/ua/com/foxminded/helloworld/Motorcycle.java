@@ -45,6 +45,11 @@ public class Motorcycle {
 		return distance;
 	}
 
+	public void setColor(String color) {
+		Color colorFiltred = Color.valueOf(color.replaceAll("\\s", "").toUpperCase());
+		this.color = colorFiltred;
+	}
+
 	@Override
 	public String toString() {
 		return "Motorcycle [name=" + name + ", yearOfProduction=" + yearOfProduction + ", price=" + price + ", weight=" + weight + ", color=" + color.value + ", engineType=" + engineType + ", isReadyToDrive=" + isReadyToDrive + ", distance = " + distance  + "]";
