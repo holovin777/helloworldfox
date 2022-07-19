@@ -11,6 +11,7 @@ public class Motorcycle {
 	Color color;
 	String engineType;
 	boolean isReadyToDrive;
+	private int distance = 0;
 
 	public Motorcycle(String name, int yearOfProduction, int price, int weight, String color, String engineType, boolean isReadyToDrive) {
 		Color colorFiltred = Color.valueOf(color.replaceAll("\\s", "").toUpperCase());
@@ -27,9 +28,26 @@ public class Motorcycle {
 		this.isReadyToDrive = true;
 	}
 
+	public void destroyEngine() {
+		this.isReadyToDrive = false;
+	}
+
+	public void addDistance(int additinalDistance) {
+		if (additinalDistance > 0) {
+			distance += additinalDistance;
+			if (distance >= 200000) {
+				this.destroyEngine();
+			}
+		}
+	}
+
+	public int getDistance() {
+		return distance;
+	}
+
 	@Override
 	public String toString() {
-		return "Motorcycle [name=" + name + ", yearOfProduction=" + yearOfProduction + ", price=" + price + ", weight=" + weight + ", color=" + color.value + ", engineType=" + engineType + ", isReadyToDrive=" + isReadyToDrive + "]";
+		return "Motorcycle [name=" + name + ", yearOfProduction=" + yearOfProduction + ", price=" + price + ", weight=" + weight + ", color=" + color.value + ", engineType=" + engineType + ", isReadyToDrive=" + isReadyToDrive + ", distance = " + distance  + "]";
 	}
 
 	@Override
