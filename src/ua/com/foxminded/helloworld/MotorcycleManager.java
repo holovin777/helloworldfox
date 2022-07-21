@@ -34,6 +34,10 @@ public class MotorcycleManager {
 		System.out.println(moto1);
 		System.out.println(moto2);
 
+		// Add float distance
+		moto1.addDistance(11.5);
+		System.out.println(moto1);
+
 	}
 
 }

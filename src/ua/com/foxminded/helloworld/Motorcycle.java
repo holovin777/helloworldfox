@@ -41,6 +41,15 @@ public class Motorcycle {
 		}
 	}
 
+	public void addDistance(double additinalDistance) {
+		if (additinalDistance > 0) {
+			distance += Math.round(additinalDistance);
+			if (distance >= 200000) {
+				this.destroyEngine();
+			}
+		}
+	}
+
 	public int getDistance() {
 		return distance;
 	}
