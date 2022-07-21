@@ -16,6 +16,10 @@ public class CarManager {
 		System.out.println(car2.equals(car3));
 		System.out.println(car1.getDistance());
 
+		// Add float distance
+		car1.addDistance(10.3);
+		System.out.println(car1);
+
 	}
 
 }

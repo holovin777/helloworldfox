@@ -9,7 +9,7 @@ public class Car {
 	int price;
 	int weight;
 	Color color;
-	private int distance = 0;
+	private double distance = 0;
 
 	public Car(String name, int yearOfProduction, int price, int weight, Color color) {
 		this.name = name;
@@ -25,7 +25,13 @@ public class Car {
 		}
 	}
 
-	public int getDistance() {
+	public void addDistance(double additinalDistance) {
+		if (additinalDistance > 0) {
+			distance += additinalDistance;
+		}
+	}
+
+	public double getDistance() {
 		return distance;
 	}
 
