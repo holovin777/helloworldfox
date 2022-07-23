@@ -10,7 +10,6 @@ public abstract class Car implements Serviceable {
 	int weight;
 	Color color;
 	private double distance = 0;
-	protected int distanceOnService = 0;
 
 	public Car(String name, int yearOfProduction, int price, int weight, Color color) {
 		this.name = name;
