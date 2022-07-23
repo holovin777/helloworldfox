@@ -8,7 +8,7 @@ public class CarManager {
 		System.out.println("- Create new objects");
 		PassengerCar car1 = new PassengerCar("Toyota Prius", 2008, 1200, 15000, Color.GREEN);
 		Bus car2 = new Bus("Renault Laguna", 2000, 1600, 9700, Color.WHITE);
-		Car car3 = new Car("Renault Laguna", 2000, 1600, 9700, Color.WHITE);
+		PassengerCar car3 = new PassengerCar("Renault Laguna", 2000, 1600, 9700, Color.WHITE);
 
 		// Add distance
 		System.out.println("- Add distance");
