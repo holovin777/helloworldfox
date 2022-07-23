@@ -32,9 +32,19 @@ public class Motorcycle {
 		this.isReadyToDrive = false;
 	}
 
+	public String isReadyToService() {
+
+		if (distance >= 8000) {
+			return "Is ready to service";
+		} else {
+			return "Service about " + (8000 - distance) + " km";
+		}
+	}
+
 	public void addDistance(int additinalDistance) {
 		if (additinalDistance > 0) {
 			distance += additinalDistance;
+			System.out.println(this.isReadyToService());
 			if (distance >= 200000) {
 				this.destroyEngine();
 			}
@@ -44,8 +54,12 @@ public class Motorcycle {
 	public void addDistance(double additinalDistance) {
 		if (additinalDistance > 0) {
 			distance += Math.round(additinalDistance);
+			System.out.println(this.isReadyToService());
 			if (distance >= 200000) {
 				this.destroyEngine();
+			}
+			if (distance >= 10000) {
+				this.isReadyToService();
 			}
 		}
 	}
