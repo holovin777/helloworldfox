@@ -2,7 +2,7 @@ package ua.com.foxminded.helloworld;
 
 import java.util.Objects;
 
-public abstract class Car {
+public abstract class Car implements Serviceable {
 
 	String name;
 	int yearOfProduction;
@@ -41,8 +41,6 @@ public abstract class Car {
 	public void service() {
 		distanceOnService = 0;
 	}
-
-	public abstract boolean isReadyToService();
 
 	@Override
 	public String toString() {
