@@ -20,6 +20,19 @@ public class CarManager {
 		car1.addDistance(10.3);
 		System.out.println(car1);
 
+		// Call service method
+		System.out.println("Call service method");
+		car1.service();
+		System.out.println(car1);
+
+		// Call isReadyToDrive method
+		System.out.println("Call is ReadyToDrive method");
+		car1.addDistance(10001);
+		car2.addDistance(10001);
+		System.out.println(car1.isReadyToService());
+		System.out.println(car2.isReadyToService());
+		System.out.println(car3.isReadyToService());
+
 	}
 
 }
