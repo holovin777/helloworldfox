@@ -2,14 +2,13 @@ package ua.com.foxminded.helloworld;
 
 import java.util.Objects;
 
-public abstract class Car implements Serviceable {
+public abstract class Car extends Machine implements Serviceable {
 
-	String name;
-	int yearOfProduction;
 	int price;
-	int weight;
 	Color color;
 	private double distance = 0;
+	protected int distanceOnService = 0;
+	
 
 	public Car(String name, int yearOfProduction, int price, int weight, Color color) {
 		this.name = name;

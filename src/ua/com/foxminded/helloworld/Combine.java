@@ -2,13 +2,19 @@ package ua.com.foxminded.helloworld;
 
 public class Combine extends AgriculturalMachinery {
 
-	isReadyToService() {
+	public boolean isReadyToService() {
 
-		if (distanceOnService > 100000) {
+		if (this.getDistanceOnService() > 100000) {
 			return true;
 		} else {
 			return false;
 		}
+
+	}
+
+	public int getDistanceOnService() {
+
+		return this.getDistanceOnService();
 
 	}
 

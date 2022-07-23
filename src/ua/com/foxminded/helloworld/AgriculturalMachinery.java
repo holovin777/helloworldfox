@@ -1,3 +1,4 @@
 package ua.com.foxminded.helloworld;
 
-public abstract class AgriculturalMachinery implements Serviceable {}
+public abstract class AgriculturalMachinery extends Machine implements Serviceable {
+}
