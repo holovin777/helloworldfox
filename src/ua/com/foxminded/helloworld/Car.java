@@ -6,9 +6,9 @@ public abstract class Car extends Machine implements Serviceable {
 
 	int price;
 	Color color;
-	private double distance = 0;
+	private double distanceDouble = 0;
+	private int distance = 0;
 	protected int distanceOnService = 0;
-	
 
 	public Car(String name, int yearOfProduction, int price, int weight, Color color) {
 		this.name = name;
@@ -17,7 +17,19 @@ public abstract class Car extends Machine implements Serviceable {
 		this.weight = weight;
 		this.color = color;
 	}
+
+	public void addDistanceDouble(double additinalDistance) {
+		if (additinalDistance > 0) {
+			distanceDouble += additinalDistance;
+			distanceOnService += Math.round(additinalDistance);
+		}
+	}
+
+	public double getDistanceDouble() {
+		return distanceDouble;
+	}
 	
+	@Override
 	public void addDistance(int additinalDistance) {
 		if (additinalDistance > 0) {
 			distance += additinalDistance;
@@ -25,17 +37,12 @@ public abstract class Car extends Machine implements Serviceable {
 		}
 	}
 
-	public void addDistance(double additinalDistance) {
-		if (additinalDistance > 0) {
-			distance += additinalDistance;
-			distanceOnService += additinalDistance;
-		}
-	}
-
-	public double getDistance() {
+	@Override
+	public int getDistance() {
 		return distance;
 	}
 
+	@Override
 	public void service() {
 		distanceOnService = 0;
 	}

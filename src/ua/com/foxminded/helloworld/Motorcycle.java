@@ -2,12 +2,9 @@ package ua.com.foxminded.helloworld;
 
 import java.util.Objects;
 
-public class Motorcycle {
+public class Motorcycle extends Machine {
 
-	String name;
-	int yearOfProduction;
 	int price;
-	int weight;
 	Color color;
 	String engineType;
 	boolean isReadyToDrive;
