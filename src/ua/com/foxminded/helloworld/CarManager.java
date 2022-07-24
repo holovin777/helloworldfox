@@ -24,7 +24,7 @@ public class CarManager {
 
 		// Add float distance
 		System.out.println("- Add float distance");
-		car1.addDistance(10.3);
+		car1.addDistanceDouble(10.3);
 		System.out.println(car1);
 
 		// Call service method
