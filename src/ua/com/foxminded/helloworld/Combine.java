@@ -26,7 +26,7 @@ public class Combine extends AgriculturalMachinery implements Serviceable {
 	@Override
 	public boolean isReadyToService() {
 
-		if (this.getDistanceOnService() > 100000) {
+		if (distanceOnService > 100000) {
 			return true;
 		} else {
 			return false;
@@ -37,18 +37,13 @@ public class Combine extends AgriculturalMachinery implements Serviceable {
 	@Override
 	public int getDistanceOnService() {
 
-		return this.getDistanceOnService();
+		return distanceOnService;
 
 	}
 
 	@Override
 	public void service() {
 		distanceOnService = 0;
-	}
-
-	public static void main(String[] args) {
-		Combine combine1 = new Combine("LEXION 8000-5000", 1992);
-		System.out.println(combine1.name);
 	}
 
 }
